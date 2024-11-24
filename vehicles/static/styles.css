@@ -10,14 +10,19 @@ body {
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* Header Styles */
 header {
     background-color: #333;
     color: white;
-    padding: 20px;
+    padding: 20px; /* Default padding */
     text-align: center;
+    width: 100%; /* Ensure header spans the full width */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow for depth */
 }
 
 /* Navigation Styles */
@@ -25,10 +30,12 @@ nav ul {
     list-style-type: none;
     padding: 0;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 nav ul li {
-    display: inline;
     margin: 0 15px;
 }
 
@@ -58,13 +65,15 @@ nav ul li a {
     background-color: #0056b3; /* Darker blue on hover */
 }
 
+
+
 .dropdown-content {
     display: none;
     position: absolute;
     background-color: rgb(199, 199, 199);
     min-width: 300px;
     z-index: 1;
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     padding: 10px;
     color: black;
@@ -97,7 +106,7 @@ nav ul li a {
 }
 
 .hero h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 20px;
 }
 
@@ -124,7 +133,6 @@ nav ul li a {
     height: 100%;
     object-fit: cover;
 }
-
 /* Call to Action Styles */
 .cta {
     text-align: center;
@@ -135,14 +143,166 @@ nav ul li a {
 .cta .button {
     background-color: #007BFF;
     color: white;
-    padding: 15px 30px;
+    padding: 15px 50px; /* Increase horizontal padding for width */
     text-decoration: none;
     font-size: 1.5rem;
     border-radius: 5px;
+    display: inline-block; /* Ensures proper spacing and alignment */
+    width: auto; /* Ensures flexibility */
+    max-width: 100%; /* Avoids exceeding the container width */
 }
 
 .cta .button:hover {
     background-color: #0056b3;
+}
+
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto; /* Ensure footer stays at the bottom */
+}
+
+/* Responsive Design for Tablets */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+        gap: 15px; /* Slightly smaller gap */
+    }
+
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+
+    .cta .button {
+        font-size: 1.2rem;
+        padding: 10px 20px;
+    }
+}
+
+/* Responsive Design for Phones */
+@media (max-width: 480px) {
+    header {
+        padding: 10px; /* Reduce padding to make the header smaller */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack navigation items vertically */
+    }
+
+    nav ul li {
+        margin: 5px 0; /* Add spacing between menu items */
+    }
+
+    nav ul li a {
+        font-size: 1rem; /* Reduce font size for smaller screens */
+    }
+
+    .gallery {
+        grid-template-columns: 1fr; /* 1 column for phones */
+        gap: 10px; /* Smaller gap for tight spaces */
+    }
+
+    .hero h2 {
+        font-size: 1.5rem; /* Adjust hero text size */
+    }
+
+    .cta .button {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+}
+
+/* About page */
+/* General reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px; /* Default padding */
+    text-align: center;
+    width: 100%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow for depth */
+}
+
+/* Navigation Styles */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+/* About Section Styles */
+.about {
+    padding: 40px 20px;
+    color: #333;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #007BFF; /* Blue color for the heading */
+}
+
+.about p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.about ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.about ul li {
+    font-size: 1.1rem;
+    margin: 10px 0;
+    text-align: left;
+    padding-left: 20px;
+    position: relative;
+}
+
+.about ul li:before {
+    content: "✓"; /* Adds a checkmark before each list item */
+    position: absolute;
+    left: 0;
+    color: green; /* Green color for the checkmark */
+}
+
+.about ul li:hover {
+    background-color: #f0f8ff;
+    transition: background-color 0.3s ease;
 }
 
 /* Footer Styles */
@@ -153,14 +313,32 @@ footer {
     padding: 20px;
 }
 
-/* Responsive Design for smaller screens */
-@media (max-width: 600px) {
-    nav ul li {
-        display: block;
-        margin: 10px 0;
+/* Responsive Design for Tablets */
+@media (max-width: 768px) {
+    .about h2 {
+        font-size: 2rem;
     }
 
-    .gallery {
-        grid-template-columns: 1fr;
+    .about p {
+        font-size: 1rem;
+    }
+
+    .about ul li {
+        font-size: 1rem;
+    }
+}
+
+/* Responsive Design for Phones */
+@media (max-width: 480px) {
+    .about h2 {
+        font-size: 1.5rem;
+    }
+
+    .about p {
+        font-size: 1rem;
+    }
+
+    .about ul li {
+        font-size: 0.9rem;
     }
 }

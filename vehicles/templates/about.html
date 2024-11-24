@@ -42,37 +42,27 @@
                     </div>
                 </li>
 
-                <li><a href="{% url 'about' %}" class="btn">About</a></li>
-
+                <li><a href="{% url 'home' %}" class="btn">Home</a></li>
 
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="hero">
-            <h2>Request a vehicle transport in Europe</h2>
+
+        <!-- About Section -->
+        <section class="about">
+            <h2>About Us</h2>
+            <p>We are a trusted vehicle transport company with years of experience in transporting cars, SUVs, and buses across Europe. Our dedicated team ensures safe, timely, and reliable vehicle transport services, no matter the size or type of vehicle. Whether you're moving a small car or a large bus, we've got you covered.</p>
+            <p>Our services include:</p>
+            <ul>
+                <li>Small Car Transport</li>
+                <li>Big Car and SUV Transport</li>
+                <li>Bus and Large Vehicle Transport</li>
+                <li>International Shipping</li>
+            </ul>
         </section>
 
-        <section class="gallery">
-            <div class="image">
-                <img src="{% static 'small_car.jpg' %}" alt="Vehicle Transport">
-            </div>
-            <div class="image">
-                <img src="{% static 'big_car.jpg' %}" alt="Vehicle Transport">
-            </div>
-            <div class="image">
-                <img src="{% static 'suv.jpg' %}" alt="Vehicle Transport">
-            </div>
-            <div class="image">
-                <img src="{% static 'car_transporter.jpg' %}" alt="Vehicle Transport">
-            </div>
-        </section>
-        
-        <!-- Moved the CTA (Make a Request) button into the main section -->
-        <section class="cta">
-            <a href="/make-request/" class="button">Make a Request</a>
-        </section>
     </main>
 
     <footer>
