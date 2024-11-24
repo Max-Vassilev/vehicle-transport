@@ -1,3 +1,4 @@
+# models.py
 from django.db import models
 
 class VehicleTransportRequest(models.Model):
@@ -11,6 +12,8 @@ class VehicleTransportRequest(models.Model):
     phone = models.CharField(max_length=15)
     pickup_country = models.CharField(max_length=100)
     pickup_city = models.CharField(max_length=100)
+    delivery_country = models.CharField(max_length=100, default='Bulgaria')  # New field
+    delivery_city = models.CharField(max_length=100, default='Sofia')     # New field
     status = models.CharField(
         max_length=20,
         choices=STATUS_CHOICES,
@@ -28,4 +31,3 @@ class VehicleTransportRequest(models.Model):
 
     def __str__(self):
         return f"Request by {self.first_name} {self.last_name}"
-
