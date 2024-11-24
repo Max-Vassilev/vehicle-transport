@@ -38,39 +38,68 @@ nav ul li a {
     font-size: 1.2rem;
 }
 
-/* Button Styles for the About Link */
-nav ul li a.btn {
-    background-color: #4A90E2;  /* Cool blue for the button */
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    font-weight: bold;
+/* Dropdown menu styles */
+.dropdown {
+    position: relative;
     display: inline-block;
-    transition: background-color 0.3s;
 }
 
-nav ul li a.btn:hover {
-    background-color: #357ABD;  /* Slightly darker blue on hover */
+.dropdown .dropbtn {
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background-color: #007BFF; /* Light blue color */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-/* Hero Section */
+.dropdown .dropbtn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 200px;
+    z-index: 1;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    padding: 10px;
+    color: black;
+}
+
+.dropdown-content .route {
+    margin-bottom: 10px;
+}
+
+.dropdown-content h4 {
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+.dropdown-content p {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Other existing styles for the page (hero, gallery, button, footer) */
 .hero {
-    background-color: #e1f0fa;  /* Soft, light blue for the hero section */
+    background-color: #f0f8ff;
     color: #333;
     text-align: center;
     padding: 50px 20px;
 }
 
-.hero h2 {
-    font-size: 2rem;
-    margin-top: 20px;
-}
-
-/* Gallery Section */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);  /* 4 equal columns for large screens */
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     padding: 20px;
 }
@@ -78,8 +107,8 @@ nav ul li a.btn:hover {
 .gallery .image {
     background-color: #ddd;
     position: relative;
-    padding-top: 100%; /* This ensures the images are always square by setting aspect ratio */
-    overflow: hidden; /* Hide any overflow from images */
+    padding-top: 100%; /* Ensures the image container is square */
+    overflow: hidden;
 }
 
 .gallery .image img {
@@ -88,20 +117,18 @@ nav ul li a.btn:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures the image covers the whole square area */
+    object-fit: cover;
 }
 
-/* Call to Action (Make a Request) Button */
 .cta {
-    background-color: transparent; /* Removed the background */
     text-align: center;
     padding: 30px 20px;
-    margin: 20px 0; /* Adding space around the section */
+    margin: 20px 0;
 }
 
 .cta .button {
-    background-color: #4A90E2; /* Cool blue for the button */
-    color: #fff;
+    background-color: #007BFF;
+    color: white;
     padding: 15px 30px;
     text-decoration: none;
     font-size: 1.5rem;
@@ -109,10 +136,9 @@ nav ul li a.btn:hover {
 }
 
 .cta .button:hover {
-    background-color: #357ABD;  /* Slightly darker blue on hover */
+    background-color: #0056b3;
 }
 
-/* Footer */
 footer {
     background-color: #333;
     color: white;
@@ -120,49 +146,14 @@ footer {
     padding: 20px;
 }
 
-/* Media Queries for Responsive Design */
-
-/* For Tablets (between 600px and 900px) */
-@media (max-width: 900px) {
-    nav ul li {
-        margin: 0 10px;
-    }
-
-    .gallery {
-        grid-template-columns: 1fr 1fr;  /* 2 columns for tablet view */
-    }
-
-    .hero h2 {
-        font-size: 1.8rem;
-    }
-
-    .cta .button {
-        font-size: 1.2rem;
-    }
-}
-
-/* For Mobile Devices (below 600px) */
+/* Responsive Design for smaller screens */
 @media (max-width: 600px) {
     nav ul li {
         display: block;
         margin: 10px 0;
     }
 
-    .hero {
-        padding: 40px 10px;
-    }
-
-    .hero h2 {
-        font-size: 1.5rem;
-    }
-
     .gallery {
-        grid-template-columns: 1fr;  /* Stack images vertically on mobile */
-        padding: 10px;
-    }
-
-    .cta .button {
-        font-size: 1.2rem;
-        padding: 12px 25px;
+        grid-template-columns: 1fr;
     }
 }
