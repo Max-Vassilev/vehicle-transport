@@ -21,3 +21,6 @@ def request_transport(request):
         form = VehicleTransportRequestForm()
 
     return render(request, 'request.html', {'form': form})
+
+def contacts(request):
+    return render(request, 'contacts.html')
