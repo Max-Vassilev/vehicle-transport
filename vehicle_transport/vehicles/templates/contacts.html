@@ -11,10 +11,9 @@
     <header>
         <nav>
             <ul>
-                <li><a href="#" class="btn">Pricing</a></li>
+                <li><a href="{% url 'pricing' %}" class="btn">Pricing</a></li>
                 <li><a href="{% url 'about' %}" class="btn">About</a></li>
-                <li><a href="{% url 'home' %}" class="btn">Home</a></li>
-
+                <li class="home"><a href="{% url 'home' %}" class="btn">Home</a></li>
             </ul>
         </nav>
     </header>

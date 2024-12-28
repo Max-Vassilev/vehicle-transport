@@ -24,3 +24,6 @@ def request_transport(request):
 
 def contacts(request):
     return render(request, 'contacts.html')
+
+def pricing(request):
+    return render(request, 'pricing.html')

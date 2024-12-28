@@ -113,30 +113,30 @@ footer {
     margin-top: auto;
 }
 
-.about {
+.about, .contact-info, .pricing-info {
     padding: 40px 20px;
     color: #333;
     text-align: center;
 }
 
-.about h2 {
+.about h2, .contact-info h2, .pricing-info h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
     color: #007BFF;
 }
 
-.about p {
+.about p, .contact-info p, .pricing-info p {
     font-size: 1.1rem;
     margin-bottom: 20px;
     line-height: 1.6;
 }
 
-.about ul {
+.about ul, .contact-info ul, .pricing-info ul {
     list-style-type: none;
     padding-left: 0;
 }
 
-.about ul li {
+.about ul li, .contact-info ul li, .pricing-info ul li {
     font-size: 1.1rem;
     margin: 10px 0;
     text-align: left;
@@ -144,61 +144,17 @@ footer {
     position: relative;
 }
 
-.about ul li:before {
+.about ul li:before, .contact-info ul li:before, .pricing-info ul li:before {
     content: "✓";
     position: absolute;
     left: 0;
     color: green;
 }
 
-.about ul li:hover {
+.about ul li:hover, .contact-info ul li:hover, .pricing-info ul li:hover {
     background-color: #f0f8ff;
     transition: background-color 0.3s;
 }
-
-.contact-info {
-    padding: 40px 20px;
-    color: #333;
-    text-align: center;
-}
-
-.contact-info h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #007BFF;
-}
-
-.contact-info p {
-    font-size: 1.1rem;
-    margin-bottom: 20px;
-    line-height: 1.6;
-}
-
-.contact-info ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-.contact-info ul li {
-    font-size: 1.1rem;
-    margin: 10px 0;
-    text-align: left;
-    padding-left: 20px;
-    position: relative;
-}
-
-.contact-info ul li:before {
-    content: "✓";
-    position: absolute;
-    left: 0;
-    color: green;
-}
-
-.contact-info ul li:hover {
-    background-color: #f0f8ff;
-    transition: background-color 0.3s;
-}
-
 
 button {
     background-color: #007BFF;
