@@ -1,10 +1,9 @@
-# models.py
 from django.db import models
 
 class VehicleTransportRequest(models.Model):
     STATUS_CHOICES = [
-        ('waiting_for_response', 'Waiting for Response'),
-        ('accepted', 'Accepted'),
+        ('pending_approval', 'Pending Approval'),
+        ('approved', 'Approved'),
     ]
     
     first_name = models.CharField(max_length=100)
@@ -12,15 +11,14 @@ class VehicleTransportRequest(models.Model):
     phone = models.CharField(max_length=15)
     pickup_country = models.CharField(max_length=100)
     pickup_city = models.CharField(max_length=100)
-    delivery_country = models.CharField(max_length=100, default='Bulgaria')  # New field
-    delivery_city = models.CharField(max_length=100, default='Sofia')     # New field
+    delivery_country = models.CharField(max_length=100, default='Bulgaria')
+    delivery_city = models.CharField(max_length=100, default='Sofia')
     status = models.CharField(
         max_length=20,
         choices=STATUS_CHOICES,
-        default='waiting_for_response'
+        default='pending_approval'
     )
     
-    # Number of vehicles ordered for each type
     small_car_count = models.PositiveIntegerField(default=0)
     big_car_count = models.PositiveIntegerField(default=0)
     suv_count = models.PositiveIntegerField(default=0)

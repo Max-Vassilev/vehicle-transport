@@ -3,4 +3,4 @@ from .models import VehicleTransportRequest
 
 @admin.register(VehicleTransportRequest)
 class VehicleTransportRequestAdmin(admin.ModelAdmin):
-    list_display = ('first_name', 'last_name', 'status', 'created_at')
+    list_display = ('first_name', 'last_name', 'status', 'created_at', 'phone')
