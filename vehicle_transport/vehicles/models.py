@@ -8,7 +8,7 @@ class VehicleTransportRequest(models.Model):
     
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
-    phone = models.CharField(max_length=15)
+    phone = models.CharField(max_length=25)
     pickup_country = models.CharField(max_length=100)
     pickup_city = models.CharField(max_length=100)
     delivery_country = models.CharField(max_length=100, default='Bulgaria')
