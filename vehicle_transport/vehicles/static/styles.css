@@ -151,7 +151,7 @@ footer {
 }
 
 .about ul li:hover, .contact-info ul li:hover, .pricing-info ul li:hover {
-    background-color: #f0f8ff;
+    background-color: #f4f4f4;
     transition: background-color 0.3s;
 }
 
@@ -173,7 +173,7 @@ button:hover {
     max-width: 600px;
     margin: 50px auto;
     padding: 20px;
-    background-color: white;
+    background-color: #f4f4f4;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
