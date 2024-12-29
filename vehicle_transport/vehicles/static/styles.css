@@ -52,7 +52,7 @@ nav ul li a:hover {
 }
 
 .hero {
-    background-color: #f0f8ff;
+    background-color: #f4f4f4;
     text-align: center;
     padding: 50px 20px;
 }
@@ -70,7 +70,6 @@ nav ul li a:hover {
 }
 
 .gallery .image {
-    background-color: #ddd;
     position: relative;
     padding-top: 100%;
     overflow: hidden;
