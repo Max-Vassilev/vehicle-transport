@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts - Vehicle Transport</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'pricing' %}" class="btn">Pricing</a></li>
+                <li><a href="{% url 'about' %}" class="btn">About</a></li>
+                <li class="home"><a href="{% url 'home' %}" class="btn">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-info">
+            <h2>Contacts</h2>
+            <p>For vehicle transport requests or any inquiries, please contact us through the following methods:</p>
+            
+            <h3>Phone</h3>
+            <p>+1 (800) 123-4567</p>
+
+            <h3>Email</h3>
+            <p>info@vehicletransport.com</p>
+            
+            <h3>Address</h3>
+            <p>123 Vehicle Transport Street, City, Country</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Vehicle Transport Company</p>
+    </footer>
+</body>
+</html>

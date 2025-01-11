@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Transport Pricing</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'contacts' %}" class="btn">Contacts</a></li>
+                <li><a href="{% url 'about' %}" class="btn">About</a></li>
+                <li class="home"><a href="{% url 'home' %}" class="btn">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="pricing-info">
+            <h2>Pricing Plans</h2>
+            <p>Choose the transport plan that works best for your needs. We offer a range of pricing options based on the vehicle type and distance.</p>
+            <ul>
+                <li>Small Car Transport: $500 - $800</li>
+                <li>Big Car & SUV Transport: $900 - $1,500</li>
+                <li>Bus & Large Vehicle Transport: $1,800 - $3,000</li>
+                <li>International Shipping: Custom Pricing</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Vehicle Transport Company</p>
+    </footer>
+</body>
+</html>
