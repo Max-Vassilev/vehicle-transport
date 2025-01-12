@@ -65,10 +65,8 @@ USE_I18N = True
 
 USE_TZ = True
 
-# Static files settings
 STATIC_URL = '/static/'
 
-# Static directory for development (your folder with both images and CSS)
 STATICFILES_DIRS = [
     BASE_DIR / 'staticfiles',
 ]
