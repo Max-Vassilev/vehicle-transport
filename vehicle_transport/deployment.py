@@ -25,11 +25,11 @@ MIDDLEWARE = [
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedMainfestStaticFilesStorage'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles'  )
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
 cinnection_string = os.environ['AZURE_POSTGRESQL_CONNECTIONSTRING']
-parameters = {pair.split('=='):pair.split('==')[1] for pair in cinnection_string.split(' ')}
+parameters = {pair.split('==')[0]: pair.split('==')[1] for pair in cinnection_string.split(' ')}
 
 DATABASES = {
     'default':{
