@@ -6,7 +6,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = config('SECRET_KEY', default='django-insecure-c0o4to^p56b^=5l#$w#^fc79%#s6f@vmwn=w(r(1n)j25mx1rl')
 
-DEBUG=True
+DEBUG=False
 
 ALLOWED_HOSTS = ['vehicle-transport.azurewebsites.net', 'localhost', '127.0.0.1']
 
