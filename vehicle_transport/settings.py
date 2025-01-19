@@ -6,7 +6,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = config('SECRET_KEY', default='django-insecure-c0o4to^p56b^=5l#$w#^fc79%#s6f@vmwn=w(r(1n)j25mx1rl')
 
-DEBUG = False  # Set to False in production
+DEBUG=True
 
 ALLOWED_HOSTS = ['vehicle-transport.azurewebsites.net', 'localhost', '127.0.0.1']
 
@@ -22,6 +22,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware'
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -58,24 +59,20 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 LANGUAGE_CODE = 'en-us'
+
 TIME_ZONE = 'UTC'
 
 USE_I18N = True
+
 USE_TZ = True
-
-# Static files settings
-STATIC_URL = '/static/'
-
-# Static files to be collected
-STATICFILES_DIRS = [
-    BASE_DIR / 'staticfiles',  # The folder with your images and styles.css
-]
-
-# Where collectstatic will place static files for production
-STATIC_ROOT = BASE_DIR / 'staticfiles_deploy'  # Folder will be created automatically by Django if it doesn't exist
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# Media files (optional, if you use media in your app)
-MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / 'media'
+# Static files:
+
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static")
+]
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
