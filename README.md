@@ -12,4 +12,6 @@ https://vehicle-transport.azurewebsites.net/
 
 ![image](https://github.com/user-attachments/assets/ea8cf2fe-feef-4e75-9b75-388455ef3eb5)
 
+![image](https://github.com/user-attachments/assets/67355c75-fe55-46b0-bb52-57cc938714fb)
 
+![image](https://github.com/user-attachments/assets/400bb288-f43d-4602-b8dd-6d6d2ee43063)
