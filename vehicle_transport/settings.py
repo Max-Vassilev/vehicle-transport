@@ -76,3 +76,17 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static")
 ]
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'vehi-database',
+        'USER': 'twuzvgkwjc',
+        'PASSWORD': 'ude2zgvH$J57rStB',
+        'HOST': 'vehi-server.postgres.database.azure.com',
+        'PORT': '5432',
+        'OPTIONS': {
+            'sslmode': 'require',
+        },
+    }
+}
