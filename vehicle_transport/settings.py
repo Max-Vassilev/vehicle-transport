@@ -77,12 +77,12 @@ STATICFILES_DIRS = [
 ]
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
-DATABASES = {
-    'default': {
-        'ENGINE': ...,
-        'NAME': ...,
-        'HOST': ...,
-        'USER': ...,
-        'PASSWORD': ...,
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': ...,
+#         'NAME': ...,
+#         'HOST': ...,
+#         'USER': ...,
+#         'PASSWORD': ...,
+#     }
+# }
