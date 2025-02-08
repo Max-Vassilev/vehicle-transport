@@ -10,6 +10,8 @@ DEBUG=True
 
 ALLOWED_HOSTS = ['vehicle-transport.azurewebsites.net', 'localhost', '127.0.0.1']
 
+CSRF_TRUSTED_ORIGINS = ['https://vehicle-transport.azurewebsites.net']
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -79,10 +81,10 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 # DATABASES = {
 #     'default': {
-#         'ENGINE': ...,
-#         'NAME': ...,
-#         'HOST': ...,
-#         'USER': ...,
-#         'PASSWORD': ...,
+#         'ENGINE': ..., 
+#         'NAME': ..., 
+#         'HOST': ..., 
+#         'USER': ..., 
+#         'PASSWORD': ..., 
 #     }
 # }
