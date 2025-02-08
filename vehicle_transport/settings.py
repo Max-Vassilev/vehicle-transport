@@ -1,7 +1,6 @@
 from decouple import config
 from pathlib import Path
 import os
-import dj_database_url
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -72,6 +71,7 @@ USE_TZ = True
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Static files:
+
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATICFILES_DIRS = [
@@ -79,17 +79,18 @@ STATICFILES_DIRS = [
 ]
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
-# Database Configuration
+
+# Database configuration (PostgreSQL for Azure)
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'vehi-database',
-        'HOST': 'vehi-server.postgres.database.azure.com',
-        'PORT': '5432',
         'USER': 'twuzvgkwjc',
         'PASSWORD': 'ude2zgvH$J57rStB',
+        'HOST': 'vehi-server.postgres.database.azure.com',
+        'PORT': '5432',
         'OPTIONS': {
-            'sslmode': 'require'
-        }
+            'sslmode': 'require',
+        },
     }
 }
