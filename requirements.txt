@@ -3,3 +3,4 @@ Django==5.1.4
 python-decouple==3.8
 sqlparse==0.5.3
 whitenoise==6.8.2
+psycopg2==2.9.10
