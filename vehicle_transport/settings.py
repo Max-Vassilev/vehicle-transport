@@ -1,6 +1,7 @@
 from decouple import config
 from pathlib import Path
 import os
+import dj_database_url
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -71,7 +72,6 @@ USE_TZ = True
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Static files:
-
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATICFILES_DIRS = [
@@ -79,12 +79,7 @@ STATICFILES_DIRS = [
 ]
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': ..., 
-#         'NAME': ..., 
-#         'HOST': ..., 
-#         'USER': ..., 
-#         'PASSWORD': ..., 
-#     }
-# }
+# Database Configuration
+DATABASES = {
+    'default': dj_database_url.config(default=config('DATABASE_URL'))
+}
