@@ -80,39 +80,18 @@ STATICFILES_DIRS = [
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 
-
-connection_string = "dbname=vehi-database host=vehi-server.postgres.database.azure.com port=5432 sslmode=require user=twuzvgkwjc password=ude2zgvH$J57rStB"
-
-db_connection_parameters = dict(param.split("=") for param in connection_string.split(" "))
-
-
-print()
-print()
-print()
-print()
-print()
-print()
-print()
-print()
-print(f"Here: {db_connection_parameters}")
-print()
-print()
-print()
-print()
-print()
-print()
-print()
-print()
+# Database configuration (PostgreSQL for Azure)
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': db_connection_parameters.get('dbname', ''),
-        'USER': db_connection_parameters.get('user', ''),
-        'PASSWORD': db_connection_parameters.get('password', ''),
-        'HOST': db_connection_parameters.get('host', ''),
-        'PORT': db_connection_parameters.get('port', ''),
+        'NAME': 'vehi-database',
+        'USER': 'twuzvgkwjc',
+        'PASSWORD': 'ude2zgvH$J57rStB',
+        'HOST': 'vehi-server.postgres.database.azure.com',
+        'PORT': '5432',
         'OPTIONS': {
-            'sslmode': db_connection_parameters.get('sslmode', ''),
+            'sslmode': 'require',
         },
     }
 }
+
