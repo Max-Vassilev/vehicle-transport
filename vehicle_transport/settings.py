@@ -80,18 +80,21 @@ STATICFILES_DIRS = [
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 
-# Database configuration (PostgreSQL for Azure)
+
+connection_string = "dbname=vehi-database host=vehi-server.postgres.database.azure.com port=5432 sslmode=require user=twuzvgkwjc password=ude2zgvH$J57rStB"
+
+conn_params = dict(param.split("=") for param in connection_string.split(" "))
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'vehi-database',
-        'USER': 'twuzvgkwjc',
-        'PASSWORD': 'ude2zgvH$J57rStB',
-        'HOST': 'vehi-server.postgres.database.azure.com',
-        'PORT': '5432',
+        'NAME': conn_params.get('dbname', ''),
+        'USER': conn_params.get('user', ''),
+        'PASSWORD': conn_params.get('password', ''),
+        'HOST': conn_params.get('host', ''),
+        'PORT': conn_params.get('port', ''),
         'OPTIONS': {
-            'sslmode': 'require',
+            'sslmode': conn_params.get('sslmode', ''),
         },
     }
 }
-
