@@ -85,6 +85,24 @@ connection_string = "dbname=vehi-database host=vehi-server.postgres.database.azu
 
 db_connection_parameters = dict(param.split("=") for param in connection_string.split(" "))
 
+
+print()
+print()
+print()
+print()
+print()
+print()
+print()
+print()
+print(f"Here: {db_connection_parameters}")
+print()
+print()
+print()
+print()
+print()
+print()
+print()
+print()
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
