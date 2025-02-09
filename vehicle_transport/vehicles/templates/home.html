@@ -6,14 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vehicle Transport</title>
     <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="{% url 'pricing' %}" class="btn">Pricing</a></li>
-                <li><a href="{% url 'contacts' %}" class="btn">Contacts</a></li>
-                <li><a href="{% url 'about' %}" class="btn">About</a></li>
+                <li><a href="{% url 'pricing' %}" class="btn"><i class="fa-solid fa-dollar-sign"></i> Pricing</a></li>
+                <li><a href="{% url 'contacts' %}" class="btn"><i class="fa-solid fa-phone"></i> Contacts</a></li>
+                <li><a href="{% url 'about' %}" class="btn"><i class="fa-solid fa-circle-info"></i> About</a></li>
+                <li><a href="{% url 'home' %}" class="btn"><i class="fa-solid fa-house"></i> Home</a></li>
             </ul>
         </nav>
     </header>
