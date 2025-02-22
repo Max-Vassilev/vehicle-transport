@@ -79,17 +79,16 @@ STATICFILES_DIRS = [
 ]
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
-# # Database configuration (PostgreSQL for Azure)
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'vehicle-transport-database',
-#         'USER': 'njysbeebiy',
-#         'PASSWORD': 'lYnVn$Ad9SMs54T5',
-#         'HOST': 'vehicle-transport-server.postgres.database.azure.com',
-#         'PORT': '5432',
-#         'OPTIONS': {
-#             'sslmode': 'require',
-#         },
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'vehicle-transport-database',
+        'USER': 'hnuctlsojt',
+        'PASSWORD': 'KCg5dx9Sj4Ob8$km',
+        'HOST': 'vehicle-transport-server.postgres.database.azure.com',
+        'PORT': '5432',
+        'OPTIONS': {
+            'sslmode': 'require',
+        },
+    }
+}
