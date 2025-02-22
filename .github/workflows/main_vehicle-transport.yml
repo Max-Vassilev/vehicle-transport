@@ -68,9 +68,9 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_B395318C8A0247B89B8C7C44EA9F039C }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_4CDD14C687C34EC4BFB6CAE9CE2DAA89 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_E3A7C1892D6D490486DB3DA1F1A22F10 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_38A4641468E54F10820794C949AF3D3A }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_E76E21922C2C44CBBE87DD330F82C8F9 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_704126715B6D47B89EB75006E35EAE40 }}
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v3
@@ -78,3 +78,4 @@ jobs:
         with:
           app-name: 'vehicle-transport'
           slot-name: 'Production'
+          
